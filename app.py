@@ -50,10 +50,10 @@ except FileNotFoundError:
 # LOAD DATASET
 # =========================================================
 
-DATASET_PATH = "sent140_cleaned.csv"
+DATA_FILE = "data/sent140_streamlit.csv"
 
 try:
-    df = pd.read_csv(DATASET_PATH)
+    df = pd.read_csv("data/sent140_streamlit.csv")
 
     # Make sure text has no missing values
     if "text" in df.columns:
