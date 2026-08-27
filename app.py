@@ -50,7 +50,11 @@ except FileNotFoundError:
 # LOAD DATASET
 # =========================================================
 
+ HEAD
 DATA_FILE = "data/sent140_streamlit.csv"
+
+DATASET_PATH = "data/sent140_streamlit.csv"
+ 2ba1ff2 (Add Streamlit dataset)
 
 try:
     df = pd.read_csv("data/sent140_streamlit.csv")
