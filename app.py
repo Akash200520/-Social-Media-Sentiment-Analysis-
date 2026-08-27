@@ -28,8 +28,8 @@ st.set_page_config(
 # LOAD MODEL
 # =========================================================
 
-MODEL_PATH = "models/sentiment_model.pkl"
-VECTORIZER_PATH = "models/vectorizer.pkl"
+model = joblib.load("sentiment_model.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 try:
     model = joblib.load(MODEL_PATH)
