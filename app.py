@@ -11,7 +11,7 @@ from sklearn.metrics import (
 )
 from collections import Counter
 import re
-
+import joblib
 
 # =========================================================
 # PAGE CONFIGURATION
@@ -27,9 +27,12 @@ st.set_page_config(
 # =========================================================
 # LOAD MODEL
 # =========================================================
+# File paths
+MODEL_PATH = "sentiment_model.pkl"
+VECTORIZER_PATH = "vectorizer.pkl"
 
-model = joblib.load("sentiment_model.pkl")
-vectorizer = joblib.load("vectorizer.pkl")
+model = joblib.load(MODEL_PATH)
+vectorizer = joblib.load(VECTORIZER_PATH)
 
 try:
     model = joblib.load(MODEL_PATH)
