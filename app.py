@@ -51,10 +51,14 @@ except FileNotFoundError:
 # =========================================================
 
  HEAD
+ HEAD
 DATA_FILE = "data/sent140_streamlit.csv"
 
 DATASET_PATH = "data/sent140_streamlit.csv"
  2ba1ff2 (Add Streamlit dataset)
+
+DATASET_PATH = "sent140_streamlit.csv"
+ fc091b7 (Fix Streamlit dataset path)
 
 try:
     df = pd.read_csv("data/sent140_streamlit.csv")
@@ -65,8 +69,7 @@ try:
 
 except FileNotFoundError:
     st.error(
-        "Dataset not found.\n\n"
-        "Please place sent140_cleaned.csv in the same folder as app.py."
+        "Please ensure sent140_streamlit.csv exists."
     )
     st.stop()
 
@@ -217,7 +220,7 @@ elif page == "🔍 Sentiment Predictor":
             prediction = model.predict(text_vector)[0]
 
             # Handle Sentiment140 labels
-            if prediction == 4 or prediction == 1:
+            if prediction == 4:
                 sentiment = "Positive"
             else:
                 sentiment = "Negative"
