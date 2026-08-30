@@ -49,7 +49,7 @@ except FileNotFoundError:
 # =========================================================
 # LOAD DATASET
 # =========================================================
-
+HEAD
  HEAD
  HEAD
 DATA_FILE = "data/sent140_streamlit.csv"
@@ -59,6 +59,9 @@ DATASET_PATH = "data/sent140_streamlit.csv"
 
 DATASET_PATH = "sent140_streamlit.csv"
  fc091b7 (Fix Streamlit dataset path)
+=======
+DATASET_PATH = "data/sent140_streamlit.csv"
+>>>>>>> ea9a8b9 (Prepare project for Streamlit deployment)
 
 try:
     df = pd.read_csv("data/sent140_streamlit.csv")
@@ -69,7 +72,7 @@ try:
 
 except FileNotFoundError:
     st.error(
-        "Please ensure sent140_streamlit.csv exists."
+        "Please ensure data/sent140_streamlit.csv exists."
     )
     st.stop()
 
