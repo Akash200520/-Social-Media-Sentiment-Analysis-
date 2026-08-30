@@ -13,9 +13,9 @@ from collections import Counter
 import re
 import joblib
 
-# =========================================================
+
 # PAGE CONFIGURATION
-# =========================================================
+
 
 st.set_page_config(
     page_title="Social Media Sentiment Analysis",
@@ -24,9 +24,8 @@ st.set_page_config(
 )
 
 
-# =========================================================
 # LOAD MODEL
-# =========================================================
+
 # File paths
 MODEL_PATH = "sentiment_model.pkl"
 VECTORIZER_PATH = "vectorizer.pkl"
@@ -46,22 +45,12 @@ except FileNotFoundError:
     st.stop()
 
 
-# =========================================================
 # LOAD DATASET
-# =========================================================
-HEAD
- HEAD
- HEAD
+
+
 DATA_FILE = "data/sent140_streamlit.csv"
 
 DATASET_PATH = "data/sent140_streamlit.csv"
- 2ba1ff2 (Add Streamlit dataset)
-
-DATASET_PATH = "sent140_streamlit.csv"
- fc091b7 (Fix Streamlit dataset path)
-=======
-DATASET_PATH = "data/sent140_streamlit.csv"
->>>>>>> ea9a8b9 (Prepare project for Streamlit deployment)
 
 try:
     df = pd.read_csv("data/sent140_streamlit.csv")
@@ -77,9 +66,7 @@ except FileNotFoundError:
     st.stop()
 
 
-# =========================================================
 # TITLE
-# =========================================================
 
 st.title("📊 Social Media Sentiment Analysis")
 
@@ -91,9 +78,9 @@ st.write(
 st.divider()
 
 
-# =========================================================
+
 # SIDEBAR
-# =========================================================
+
 
 st.sidebar.title("📌 Navigation")
 
@@ -110,9 +97,9 @@ page = st.sidebar.radio(
 )
 
 
-# =========================================================
+
 # HOME
-# =========================================================
+
 
 if page == "🏠 Home":
 
@@ -192,9 +179,9 @@ if page == "🏠 Home":
     )
 
 
-# =========================================================
+
 # SENTIMENT PREDICTOR
-# =========================================================
+
 
 elif page == "🔍 Sentiment Predictor":
 
@@ -1007,9 +994,9 @@ elif page == "📊 Visualizations":
 
     st.divider()
 
-    # -----------------------------------------------------
+
     # 6. Dataset Sample
-    # -----------------------------------------------------
+
 
     st.subheader(
         "6️⃣ Random Dataset Sample"
@@ -1022,9 +1009,9 @@ elif page == "📊 Visualizations":
         ),
         use_container_width=True
     )
-# ============================================
+
 # CUSTOM COLORFUL DESIGN
-# ============================================
+
 
 st.markdown("""
 <style>
